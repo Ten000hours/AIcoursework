@@ -10,6 +10,7 @@ import gym
 import astar
 import numpy as np
 import time
+import matplotlib.pyplot as plot
 from run_random import  *
 from uofgsocsai import LochLomondEnv # load the class defining the custom Open AI Gym problem
 
@@ -21,8 +22,12 @@ is_stochastic = True  # should be False for A-star (deterministic search) and Tr
 max_episodes = 2000   # you can decide you rerun the problem many times thus generating many episodes... you can learn from them all!
 max_iter_per_episode = 500 # you decide how many iterations/actions can be executed per episode
 
+
+observation_list= list()
+reward_list= list()
+
 # Generate the specific problem 
-env = LochLomondEnv(problem_id=problem_id, is_stochastic=False, reward_hole=reward_hole)
+env = LochLomondEnv(problem_id=problem_id, is_stochastic=True, reward_hole=reward_hole)
 
 # Let's visualize the problem/env
 print('env',env.desc)
@@ -41,7 +46,11 @@ for e in range(max_episodes): # iterate over episodes
       observation, reward, done, info = env.step(action) # observe what happends when you take the action
       
       # TODO: You'll need to add code here to collect the rewards for plotting/reporting in a suitable manner
-      print(observation)
+      observation_list.append(observation)
+      reward_list.append(reward)
+
+
+
       print("e,iter,reward,done =" + str(e) + " " + str(iter)+ " " + str(reward)+ " " + str(done))
 
       # Check if we are done and monitor rewards etc...
@@ -54,6 +63,9 @@ for e in range(max_episodes): # iterate over episodes
           env.render()     
           print("We have reached the goal :-) [stop trying to move; we can't]. That's ok we have achived the goal]")
           break
+    print(observation_list)
+    plot.plot( observation_list)
+    plot.show()
      
       
 
