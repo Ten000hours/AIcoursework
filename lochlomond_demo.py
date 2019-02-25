@@ -10,6 +10,7 @@ import gym
 import astar
 import numpy as np
 import time
+from run_random import  *
 from uofgsocsai import LochLomondEnv # load the class defining the custom Open AI Gym problem
 
 # Setup the parameters for the specific problem (you can change all of these if you want to) 
@@ -34,7 +35,9 @@ for e in range(max_episodes): # iterate over episodes
     
     for iter in range(max_iter_per_episode):
       env.render() # for debugging/develeopment you may want to visualize the individual steps by uncommenting this line
-      action = env.action_space.sample() # your agent goes here (the current agent takes random actions)
+      #action = env.action_space.sample() # your agent goes here (the current agent takes random actions)
+      random= runRandom()
+      action= random.action()
       observation, reward, done, info = env.step(2) # observe what happends when you take the action
       
       # TODO: You'll need to add code here to collect the rewards for plotting/reporting in a suitable manner
