@@ -38,7 +38,7 @@ for e in range(max_episodes): # iterate over episodes
       #action = env.action_space.sample() # your agent goes here (the current agent takes random actions)
       random= runRandom()
       action= random.action()
-      observation, reward, done, info = env.step(2) # observe what happends when you take the action
+      observation, reward, done, info = env.step(action) # observe what happends when you take the action
       
       # TODO: You'll need to add code here to collect the rewards for plotting/reporting in a suitable manner
       print(observation)
