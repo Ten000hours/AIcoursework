@@ -1,68 +1,60 @@
 from time import sleep
 import numpy as np
 import gym
+import time, pickle, os
 from uofgsocsai import *
 
 # Environment
-env = LochLomondEnv(problem_id=0,is_stochastic=True,reward_hole=0.0)
-inputCount = env.observation_space.n
-actionsCount = env.action_space.n
+env = LochLomondEnv(problem_id=1,is_stochastic=False,reward_hole=0.0)
+epsilon = 0.9
+total_episodes = 150
+max_steps = 100
 
-# Init Q-Table
-Q = {}
-for i in range(inputCount):
-    Q[i] = np.random.rand(actionsCount)
+lr_rate = 0.81
+gamma = 0.96
 
-# Hyperparameters
-lr = 0.33
-lrMin = 0.001
-lrDecay = 0.9999
-gamma = 1.0
-epsilon = 1.0
-epsilonMin = 0.001
-epsilonDecay = 0.97
-episodes = 2000
-
-# Training
-for i in range(episodes):
-    print("Episode {}/{}".format(i + 1, episodes))
-    s = env.reset()
-    done = False
-
-    while not done:
-        if np.random.random() < epsilon:
-            a = np.random.randint(0, actionsCount)
-        else:
-            a = np.argmax(Q[s])
-
-        newS, r, done, _ = env.step(a)
-        Q[s][a] = Q[s][a] + lr * (r + gamma * np.max(Q[newS]) - Q[s][a])
-        s = newS
-
-        if lr > lrMin:
-            lr *= lrDecay
-
-        if not r==0 and epsilon > epsilonMin:
-            epsilon *= epsilonDecay
+Q = np.zeros((env.observation_space.n, env.action_space.n))
 
 
-print("")
-print("Learning Rate :", lr)
-print("Epsilon :", epsilon)
+def choose_action(state):
+    action = 0
+    if np.random.uniform(0, 1) < epsilon:
+        action = env.action_space.sample()
+    else:
+        action = np.argmax(Q[state, :])
+    return action
+
+
+def learn(state, state2, reward, action):
+    predict = Q[state, action]
+    target = reward + gamma * np.max(Q[state2, :])
+    Q[state, action] = Q[state, action] + lr_rate * (target - predict)
+
+
+# Start
+for episode in range(total_episodes):
+    state = env.reset()
+    t = 0
+
+    while t < max_steps:
+        env.render()
+
+        action = choose_action(state)
+
+        state2, reward, done, info = env.step(action)
+
+        learn(state, state2, reward, action)
+
+        state = state2
+
+        t += 1
+
+        if done:
+            break
+
+        time.sleep(0.1)
+
 print(Q)
-# Testing
-print("\nPlay Game on 100 episodes...")
 
-avg_r = 0
-for i in range(100):
-    s = env.reset()
-    done = False
-
-    while not done:
-        a = np.argmax(Q[s])
-        newS, r, done, _ = env.step(a)
-        s = newS
-
-    avg_r += r/100.
-
-print("Average reward on 100 episodes :", avg_r)
+with open("frozenLake_qTable.pkl", 'wb') as f:
+    pickle.dump(Q, f)
