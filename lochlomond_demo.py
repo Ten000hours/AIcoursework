@@ -11,6 +11,7 @@ import astar
 import numpy as np
 import time
 import matplotlib.pyplot as plot
+from helpers import *
 from run_random import  *
 from uofgsocsai import LochLomondEnv # load the class defining the custom Open AI Gym problem
 
