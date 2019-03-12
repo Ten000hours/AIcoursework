@@ -45,7 +45,8 @@ for e in range(max_episodes): # iterate over episodes
       random= runRandom()
       action= random.action()
       observation, reward, done, info = env.step(action) # observe what happends when you take the action
-      
+      print("================================================")
+      print("info",info)
       # TODO: You'll need to add code here to collect the rewards for plotting/reporting in a suitable manner
       observation_list.append(observation)
       reward_list.append(reward)
