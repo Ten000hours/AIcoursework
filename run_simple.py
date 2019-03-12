@@ -285,7 +285,7 @@ def main(state_initial_id, maze_problem, initial_node_colors):
     print("Solution trace:" + str(solution_path))
     print("----------------------------------------")
     print("Final solution path:")
-    return solution_path
+    return solution_path,iterations
 
 
 # show_map(final_path_colors(maze_problem, node.solution()))
@@ -302,5 +302,5 @@ def filegenerate(problem_id, solution_path):
 if __name__ == '__main__':
     maze_map, problem_id, state_space_locations, state_space_actions, state_initial_id, state_goal_id, initial_node_colors, node_label_pos = enviornment()
     maze_problem = mazeproblem(state_initial_id, state_goal_id, maze_map)
-    solution_path = main(state_initial_id, maze_problem, initial_node_colors)
+    solution_path,iterations = main(state_initial_id, maze_problem, initial_node_colors)
     filegenerate(problem_id, solution_path)

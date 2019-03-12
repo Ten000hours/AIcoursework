@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3843e548-b7ee-4835-9773-176472d8c024" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/run_eval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frozenLake_qTable.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/frozenLake_qTable.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_rl.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_rl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_eval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_simple.py" afterDir="false" />
     </list>
     <list id="ef60b3a5-44ef-4b9a-b960-c6039d30d3b2" name="simple" comment="" />
@@ -20,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lochlomond_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="393">
+              <caret line="55" column="60" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="60" />
               <folding>
                 <element signature="e#167#177#0" expanded="true" />
               </folding>
@@ -32,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_random.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="294">
               <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
               <folding>
                 <element signature="e#147#157#0" expanded="true" />
@@ -44,11 +42,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4195">
-              <caret line="381" column="16" lean-forward="true" selection-start-line="381" selection-start-column="16" selection-end-line="381" selection-end-column="16" />
+            <state relative-caret-position="304">
+              <caret line="303" column="4" selection-start-line="303" selection-start-column="4" selection-end-line="303" selection-end-column="73" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#2130#2158#0" />
+                <element signature="e#7403#9830#0" />
+                <element signature="e#9874#10190#0" />
+                <element signature="e#10239#10591#0" />
+                <element signature="e#7250#7313#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-49">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -56,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uofgsocsai.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="1870">
               <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -65,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_rl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-590">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="150">
+              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -77,16 +89,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_eval.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rl_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="-44">
+              <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -112,11 +131,11 @@
       <list>
         <option value="$PROJECT_DIR$/run_random.py" />
         <option value="$PROJECT_DIR$/uofgsocsai.py" />
-        <option value="$PROJECT_DIR$/rl_test.py" />
         <option value="$PROJECT_DIR$/readme" />
+        <option value="$PROJECT_DIR$/rl_test.py" />
         <option value="$PROJECT_DIR$/lochlomond_demo.py" />
-        <option value="$PROJECT_DIR$/run_simple.py" />
         <option value="$PROJECT_DIR$/run_rl.py" />
+        <option value="$PROJECT_DIR$/run_simple.py" />
         <option value="$PROJECT_DIR$/run_eval.py" />
       </list>
     </option>
@@ -133,6 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,7 +164,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_rl">
+  <component name="RunManager" selected="Python.run_eval">
     <configuration name="lochlomond_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AIcoursework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,7 +225,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_random" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run_eval" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AIcoursework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -218,7 +237,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_random.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_eval.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -271,11 +290,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_rl" />
+        <item itemvalue="Python.run_eval" />
         <item itemvalue="Python.run_simple" />
-        <item itemvalue="Python.run_random" />
-        <item itemvalue="Python.rl_test" />
         <item itemvalue="Python.lochlomond_demo" />
+        <item itemvalue="Python.run_rl" />
+        <item itemvalue="Python.rl_test" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +359,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552250544995</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="file generated">
+      <created>1552385946720</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1552385946720</updated>
+    </task>
+    <task id="LOCAL-00009" summary="eval">
+      <created>1552407372445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552407372445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -354,13 +387,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1879452" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1879452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980822" weight="0.3454746" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4980822" visible="true" weight="0.3785872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49972603" weight="0.39955848" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,7 +469,9 @@
     <MESSAGE value="q-learning algo and test" />
     <MESSAGE value="readme" />
     <MESSAGE value="parser simple" />
-    <option name="LAST_COMMIT_MESSAGE" value="parser simple" />
+    <MESSAGE value="file generated" />
+    <MESSAGE value="eval" />
+    <option name="LAST_COMMIT_MESSAGE" value="eval" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/lib/python3.6/_bootlocale.py">
@@ -512,16 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rl_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1437">
@@ -532,15 +558,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.py">
+    <entry file="file://$PROJECT_DIR$/run_random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="49" column="70" lean-forward="true" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+        <state relative-caret-position="294">
+          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+          <folding>
+            <element signature="e#147#157#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_rl_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/out_simple_0.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -549,9 +575,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lochlomond_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="55" column="60" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="60" />
+          <folding>
+            <element signature="e#167#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out_rl_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rl_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uofgsocsai.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="1870">
           <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -559,48 +612,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_random.py">
+    <entry file="file://$PROJECT_DIR$/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-          <folding>
-            <element signature="e#147#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lochlomond_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#167#177#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-49">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run_simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4195">
-          <caret line="381" column="16" lean-forward="true" selection-start-line="381" selection-start-column="16" selection-end-line="381" selection-end-column="16" />
+        <state relative-caret-position="304">
+          <caret line="303" column="4" selection-start-line="303" selection-start-column="4" selection-end-line="303" selection-end-column="73" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#2130#2158#0" />
+            <element signature="e#7403#9830#0" />
+            <element signature="e#9874#10190#0" />
+            <element signature="e#10239#10591#0" />
+            <element signature="e#7250#7313#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run_rl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="150">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_eval.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
