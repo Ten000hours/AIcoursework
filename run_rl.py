@@ -1,11 +1,17 @@
 from time import sleep
 import numpy as np
 import gym
+import sys
 import time, pickle, os
 from uofgsocsai import *
 
+
+
 # Environment
-env = LochLomondEnv(problem_id=1,is_stochastic=False,reward_hole=0.0)
+problem_id=int(sys.argv[1])
+print(problem_id)
+# problem_id=0
+env = LochLomondEnv(problem_id=problem_id,is_stochastic=False,reward_hole=0.0)
 epsilon = 0.9
 total_episodes = 150
 max_steps = 100
@@ -58,3 +64,9 @@ print(Q)
 
 with open("frozenLake_qTable.pkl", 'wb') as f:
     pickle.dump(Q, f)
+
+filename= "out_rl_"+str(problem_id)
+text=Q
+print(str(text))
+with open(filename+".txt", "w") as file:
+    file.write(str(text))

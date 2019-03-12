@@ -16,8 +16,9 @@ from matplotlib import lines
 
 from helpers import *
 
+problem_id=0
 # first, parse the env.desc to undirected map using aima tool box
-env= LochLomondEnv(problem_id=0,is_stochastic=False,reward_hole=0.0)
+env= LochLomondEnv(problem_id=problem_id,is_stochastic=False,reward_hole=0.0)
 
 print(env.desc)
 
@@ -357,7 +358,7 @@ def display_visual(user_input, algorithm=None, problem=None):
 
 all_node_colors=[]
 iterations, all_node_colors, node = my_astar_search(problem=maze_problem, h=None)
-
+print(iterations)
 #-- Trace the solution --#
 solution_path = [node]
 cnode = node.parent
@@ -374,3 +375,10 @@ print("----------------------------------------")
 print("Final solution path:")
 # show_map(final_path_colors(maze_problem, node.solution()))
 
+
+
+filename= "out_simple_"+str(problem_id)
+text="Identified goal state:"+str(solution_path[0])+"\n"+"Solution trace:"+str(solution_path)
+print(str(text))
+with open(filename+".txt", "w") as file:
+    file.write(str(text))
