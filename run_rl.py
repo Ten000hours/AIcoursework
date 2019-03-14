@@ -13,8 +13,8 @@ def environment():
     # problem_id=0
     env = LochLomondEnv(problem_id=problem_id,is_stochastic=False,reward_hole=0.0)
     epsilon = 0.9
-    total_episodes = 150
-    max_steps = 100
+    total_episodes = 50000
+    max_steps = 300
 
     lr_rate = 0.81
     gamma = 0.96
@@ -28,7 +28,7 @@ def environment_eval(problem_id):
     # problem_id=0
     env = LochLomondEnv(problem_id=problem_id,is_stochastic=False,reward_hole=0.0)
     epsilon = 0.9
-    total_episodes = 150
+    total_episodes = 2000
     max_steps = 100
 
     lr_rate = 0.81
@@ -68,8 +68,8 @@ def main(total_episodes,env,max_steps,Q,gamma,lr_rate,epsilon):
             state2, reward, done, info = env.step(action)
 
             reward_list.append(reward)
-
-            iter_list.append(t)
+            if(done and reward == +1.0):
+                iter_list.append(t)
 
             learn(state, state2, reward, action,Q,gamma,lr_rate)
 
@@ -80,7 +80,7 @@ def main(total_episodes,env,max_steps,Q,gamma,lr_rate,epsilon):
             if done:
                 break
 
-            time.sleep(0.1)
+            # time.sleep(0.1)
 
     print(Q)
     return reward_list,iter_list

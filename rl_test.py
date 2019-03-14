@@ -5,7 +5,7 @@ import time
 import pickle, os
 from uofgsocsai import *
 
-env = LochLomondEnv(problem_id=1,is_stochastic=False,reward_hole=0.0)
+env = LochLomondEnv(problem_id=2,is_stochastic=False,reward_hole=0.0)
 
 with open("frozenLake_qTable.pkl", 'rb') as f:
 

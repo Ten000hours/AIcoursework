@@ -75,11 +75,11 @@ class LochLomondEnv(discrete.DiscreteEnv):
     metadata = {'render.modes': ['human', 'ansi']}
 
     def __init__(self, problem_id=0, is_stochastic=True, reward_hole = 0.0):
-        if reward_hole > 0.0:
-            raise ValueError('reward_hole must be equal to 0 or smaller')
+        # if reward_hole > 0.0:
+        #     raise ValueError('reward_hole must be equal to 0 or smaller')
     
         # Fetch the base problem (without S and G)
-        map_name_base="4x4-base" # for the final submission in AI (H) this should be 8x8-base but you may want to start out with 4x4-base!
+        map_name_base="8x8-base" # for the final submission in AI (H) this should be 8x8-base but you may want to start out with 4x4-base!
         desc = MAPS_BASE[map_name_base]
         self.nrow, self.ncol = nrow, ncol = np.asarray(desc,dtype='c').shape
 
@@ -145,6 +145,8 @@ class LochLomondEnv(discrete.DiscreteEnv):
                                     rew = 1.0
                                 elif(newletter == b'H'):
                                     rew = reward_hole
+                                # elif (newletter == b'F'):
+                                #     rew = 0.2
                                 li.append((1.0/3.0, newstate, rew, done))
                         else:
                             newrow, newcol = inc(row, col, a)
@@ -155,7 +157,9 @@ class LochLomondEnv(discrete.DiscreteEnv):
                             if(newletter == b'G'):
                                 rew = 1.0       
                             elif(newletter == b'H'):
-                                rew = reward_hole                     
+                                rew = reward_hole
+                            # elif(newletter == b'F'):
+                            #     rew= 0.2
                             li.append((1.0, newstate, rew, done))
 
         super(LochLomondEnv, self).__init__(nS, nA, P, isd)
