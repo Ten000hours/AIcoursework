@@ -1,0 +1,2 @@
+Identified goal state:<Node S_7_7>
+Solution trace:[<Node S_7_7>, <Node S_6_7>, <Node S_5_7>, <Node S_4_7>, <Node S_3_7>, <Node S_2_7>, <Node S_1_7>, <Node S_0_7>]

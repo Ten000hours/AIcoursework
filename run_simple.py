@@ -18,7 +18,7 @@ from helpers import *
 
 
 def enviornment():
-    problem_id = 1
+    problem_id = int(sys.argv[1])
     # problem_id = str(problem_id)
     # first, parse the env.desc to undirected map using aima tool box
     env = LochLomondEnv(problem_id=problem_id, is_stochastic=False, reward_hole=0.0)
@@ -284,16 +284,17 @@ def main(state_initial_id, maze_problem, initial_node_colors):
     print("----------------------------------------")
     print("Solution trace:" + str(solution_path))
     print("----------------------------------------")
-    print("Final solution path:")
-    return solution_path,iterations
+    print()
+    return solution_path, iterations
 
 
 # show_map(final_path_colors(maze_problem, node.solution()))
 
 
-def filegenerate(problem_id, solution_path):
+def filegenerate(problem_id, solution_path, iterations):
     filename = "out_simple_" + str(problem_id)
-    text = "Identified goal state:" + str(solution_path[0]) + "\n" + "Solution trace:" + str(solution_path)
+    text = "Identified goal state:" + str(solution_path[0]) + "\n" + "Solution trace:" + str(
+        solution_path) +"\n" + "iterations: " +  str(iterations)
     print(str(text))
     with open(filename + ".txt", "w") as file:
         file.write(str(text))
@@ -302,5 +303,5 @@ def filegenerate(problem_id, solution_path):
 if __name__ == '__main__':
     maze_map, problem_id, state_space_locations, state_space_actions, state_initial_id, state_goal_id, initial_node_colors, node_label_pos = enviornment()
     maze_problem = mazeproblem(state_initial_id, state_goal_id, maze_map)
-    solution_path,iterations = main(state_initial_id, maze_problem, initial_node_colors)
-    filegenerate(problem_id, solution_path)
+    solution_path, iterations = main(state_initial_id, maze_problem, initial_node_colors)
+    filegenerate(problem_id, solution_path, iterations)

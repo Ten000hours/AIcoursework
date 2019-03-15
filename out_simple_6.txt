@@ -1,0 +1,3 @@
+Identified goal state:<Node S_7_2>
+Solution trace:[<Node S_7_2>, <Node S_6_2>, <Node S_6_3>, <Node S_5_3>, <Node S_5_4>, <Node S_4_4>, <Node S_3_4>, <Node S_2_4>, <Node S_1_4>, <Node S_1_5>, <Node S_1_6>, <Node S_0_6>]
+iterations: 146

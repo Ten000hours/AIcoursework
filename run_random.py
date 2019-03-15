@@ -86,10 +86,17 @@ def main(max_episodes,env,max_iter_per_episode,reward_hole,observation_list,rewa
     # plot.ylabel("iterations")
     # plot.show()
     return observation_list,reward_list
-
+def filegenerate(problem_id,reward_list):
+    filename = "out_random_" + str(problem_id)
+    text = "rewards that obtained when the agent sucess to the goal:" + str(len(reward_list))+str(reward_list)
+    print(str(text))
+    with open(filename + ".txt", "w") as file:
+        file.write(str(text))
 if __name__ == '__main__':
+    problem_id=int(sys.argv[1])
     max_episodes,env,max_iter_per_episode,observation_list,reward_list=eviornment()
-    main(max_episodes,env,max_iter_per_episode,0.0,observation_list,reward_list)
+    observation_list,reward_list=main(max_episodes,env,max_iter_per_episode,0.0,observation_list,reward_list)
+    filegenerate(problem_id,reward_list)
 
 
 

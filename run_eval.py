@@ -20,7 +20,7 @@ def enviornment_select(type="run_rl"):
         max_episodes,env,max_iter_per_episode,observation_list,reward_list=run_random.eviornment()
         return max_episodes,env,max_iter_per_episode,observation_list,reward_list
 
-def running_rl(env, epsilon, total_episodes, max_steps, lr_rate, gamma, Q, type='run_simple'):
+def running_rl(env, epsilon, total_episodes, max_steps, lr_rate, gamma, Q):
     reward_list, iter_list = run_rl.main(total_episodes, env, max_steps, Q, gamma, lr_rate, epsilon)
     return reward_list, iter_list
 
@@ -47,16 +47,23 @@ if __name__ == '__main__':
     env, problem_id, epsilon, total_episodes, max_steps, lr_rate, gamma, Q = enviornment_select("run_rl")
     reward_list, iter_list = running_rl(env, epsilon, total_episodes, max_steps, lr_rate, gamma, Q)
     plot.plot(iter_list)
-    # plot.plot(reward_list)
 
+    #
     maze_map, problem_id, state_space_locations, state_space_actions, state_initial_id, state_goal_id, initial_node_colors, node_label_pos = enviornment_select(
         "run_simple")
     maze_problem = run_simple.mazeproblem(state_initial_id, state_goal_id, maze_map)
     solution_path, iterations = running_simple(state_initial_id, maze_problem, initial_node_colors)
     plot.axhline(y=iterations, xmin=0, xmax=200, color='k')
 
+    #
+    max_episodes,env,max_iter_per_episode,observation_list,reward_list_random=enviornment_select("run_random")
+    observation_list,reward_list_random=running_random(max_episodes,env,max_iter_per_episode,observation_list,reward_list_random)
+    plot.plot(y=observation_list,color="y")
 
-    max_episodes,env,max_iter_per_episode,observation_list,reward_list=enviornment_select("run_random")
-    observation_list,reward_list=running_random(max_episodes,env,max_iter_per_episode,observation_list,reward_list)
-    plot.plot(observation_list,color="y")
+    plot.title("how many iterations for each agent when sucess")
+    plot.xlabel("episode")
+    plot.ylabel("iterations")
+    plot.legend(["qlearning iter","simple iter","random iter"],loc="upper left")
+    plot.savefig("iter_"+str(problem_id)+".png")
     plot.show()
+
